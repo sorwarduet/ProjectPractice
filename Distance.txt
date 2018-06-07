@@ -1,0 +1,17 @@
+1. get current location 
+	#Add three permission in AndroidManifest
+
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+       <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		
+2. get ohters place location
+	# Add API Google
+	Use 'react-native-geocoding'
+	
+3. measure two location
+	
+4. Show the distance
+
+
+
