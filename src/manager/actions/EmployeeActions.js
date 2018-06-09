@@ -62,3 +62,6 @@ export const employeeDelete = ({ uid }) => {
         });
     };
 };
+export const employeeClick = () => {
+    
+};

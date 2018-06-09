@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { CardSection } from '../../common';
+//import { employeeClick } from '../actions';
 import { Actions } from 'react-native-router-flux';
 
 

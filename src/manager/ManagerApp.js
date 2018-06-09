@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
 import ReduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { Container, Header, Content, Item, Input, Icon, Body, Text } from 'native-base';
+import { Container } from 'native-base';
 import firebase from 'firebase';
 import reducers from './reducers';
 //import LoginForm from './components/LoginForm';
