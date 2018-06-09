@@ -14,7 +14,11 @@ const validate = values => {
         errors.username = 'please fill the username';
     } else if (values.username.length > 10) {
         errors.username = 'Maximum 10 Character';
+    } else if (!/^[a-zA-Z0-9]+$/i.test(values.username)) {
+        errors.username = 'Only Character with digit';
     }
+
+
     if (!values.email) {
         errors.email = 'please fill the email';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -23,6 +27,10 @@ const validate = values => {
 
     if (!values.phone) {
         errors.phone = 'please fill the phone number';
+    } else if (isNaN(Number(values.phone))) {
+        errors.phone = 'Must be a number';
+    } else if (values.phone.length !== 11) {
+        errors.phone = 'Must be 11 digit';
     }
 
     return errors;
@@ -44,7 +52,7 @@ const   myField = ({ label, placeholder, meta: { error, touched, warning }, inpu
 
 //for submit 
 const submit = values => {
-    alert(values);
+    console.log(values.username);
 };
 
 const SimpleForm = props => {
@@ -54,9 +62,8 @@ const SimpleForm = props => {
                     <Field
                         name="username"
                         component={myField}
-                        label="username"
+                        label="Username"
                         placeholder="Enter your username"
-                       
                      />
                      <Field
                         name="email"
@@ -77,7 +84,6 @@ const SimpleForm = props => {
                         Submit
                      </Button>
                  </CardSection>
-            
              </View>
                      
         );
